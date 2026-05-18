@@ -1,0 +1,26 @@
+{
+  "name": "probe-loop",
+  "version": "1.0.0",
+  "description": "A verification skill that catches bugs surviving green test suites by exercising real production paths.",
+  "owner": {
+    "name": "Amir Shayegh"
+  },
+  "plugins": [
+    {
+      "name": "probe-loop",
+      "description": "Run the probe loop to verify whether software actually works against the real runtime. Catches silent no-ops, environment mismatches, swallowed errors, hardcoded parameters, cross-layer trust violations, and destructive edge cases.",
+      "source": "./plugins/probe-loop",
+      "category": "testing",
+      "keywords": [
+        "testing",
+        "verification",
+        "agentic-coding",
+        "qa",
+        "integration-testing",
+        "probe",
+        "hardening",
+        "regression"
+      ]
+    }
+  ]
+}
