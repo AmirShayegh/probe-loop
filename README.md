@@ -62,7 +62,7 @@ The skill activates on prompts like:
 
 ## Background
 
-The probe loop is a verification practice that became affordable when agents could hold the codebase, the failure trace, and the regression-test draft inside a single context. The full rationale is in [the-probe-loop.md](the-probe-loop.md).
+The probe loop is a verification practice that became affordable when agents could hold the codebase, the failure trace, and the regression-test draft inside a single context. The full rationale is at [shayegh.ca/blog](https://www.shayegh.ca/blog).
 
 ## License
 
