@@ -1,0 +1,22 @@
+{
+  "name": "probe-loop",
+  "version": "1.0.0",
+  "description": "Run the probe loop to verify whether software actually works against the real runtime. Catches silent no-ops, environment mismatches, swallowed errors, hardcoded parameters, cross-layer trust violations, and destructive edge cases.",
+  "author": {
+    "name": "Amir Shayegh",
+    "url": "https://shayegh.ca"
+  },
+  "homepage": "https://shayegh.ca/blog/the-probe-loop",
+  "repository": "https://github.com/AmirShayegh/probe-loop",
+  "license": "MIT",
+  "keywords": [
+    "testing",
+    "verification",
+    "agentic-coding",
+    "qa",
+    "integration-testing",
+    "probe",
+    "hardening",
+    "regression"
+  ]
+}

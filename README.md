@@ -24,6 +24,12 @@ Then reload:
 /reload-plugins
 ```
 
+After install, the skill is available two ways. Claude will load it automatically when you ask things like "does this actually work?" or "verify this end-to-end." You can also invoke it explicitly:
+
+```
+/probe-loop:probe-loop
+```
+
 ## What it does
 
 The probe loop is a five-stage verification pass that catches bugs surviving green test suites:
