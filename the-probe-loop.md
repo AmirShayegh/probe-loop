@@ -1,6 +1,6 @@
 # The Probe Loop
 
-*A practice for verifying software in the agentic era*
+*A practical loop for the moment after the tests are green*
 
 ---
 
@@ -12,7 +12,7 @@ This is the kind of bug that survives every contract test written for it. It doe
 
 Something is happening in agentic coding that does not have a name yet. It looks like this. The architecture is done. The unit tests are green. CI is clean. And the developer, working with an agent, opens a session that has nothing to do with adding features. They ask the agent to run the system. Submit a real operation through the real interface. Capture the actual output. Compare it against what the system claimed to do. Find the seams where reality and report diverge. Fix the root cause. Lock it in.
 
-This is happening across teams, across codebases, across stacks. It is not exploratory testing in the QA sense, because the developer and the agent are doing it together, in the same loop, with full architectural context, and the probe that finds a bug becomes the regression gate that closes it. It is not test-driven development, because nothing is being driven by the test. The system already exists. The probes are not contracts. They are experiments.
+I keep seeing adjacent versions of this pattern appear in agentic coding workflows. It is not exploratory testing in the QA sense, because the developer and the agent are doing it together, in the same loop, with full architectural context, and the probe that finds a bug becomes the regression gate that closes it. It is not test-driven development, because nothing is being driven by the test. The system already exists. The probes are not contracts. They are experiments.
 
 It is a loop. The probe loop.
 
@@ -24,7 +24,7 @@ This document is an attempt to name what is already being assembled, lay out its
 
 The probe loop has five stages, executed in sequence, almost always inside one continuous session.
 
-**Probe.** Submit a real operation through the real production path. Cross every layer boundary. No mocks where the seam matters. No fixtures where the environment matters.
+**Probe.** Submit a real operation through the real production path. Cross every layer boundary. No mocks where the seam matters. No fixtures where the environment matters. Real production path does not always mean live production data. It means the same runtime, provider, stream, file, network, or integration seam the user path depends on.
 
 **Verify.** Do not trust what the system reports. Read the actual output. Compare it independently against what the operation should have produced. Status codes are not verification. Logs are not verification. Bytes are verification. Pixels are verification. Stream events are verification.
 
@@ -47,6 +47,16 @@ An agent collapses the loop. The probe author, the probe runner, the failure inv
 This is the substrate change. The probe loop is not a new idea. It is an old idea that has finally become affordable. What was once a heroic effort by a senior engineer with a clear weekend is now a routine pass that can be run by a developer who can frame the right question and judge the answer, paired with a competent agent.
 
 This is what is making the practice converge across the agentic coding community. Not a shared methodology. A shared economic reality.
+
+## A prompt I actually use
+
+The workflow can be as direct as one instruction at the start of a session:
+
+```
+Exercise the real path for this feature. Do not trust status codes or logs as proof. Capture the actual output. Compare it to the intended result. Find the first layer where reality diverges from what the system reports. Fix the root cause, then add a regression check that would have failed before the fix.
+```
+
+That prompt is not magic. It just forces the session to care about output rather than vibes. Without it, an agent may stop at "tests pass." With it, the agent has to prove the system did the thing.
 
 ## Tenets
 

@@ -1,4 +1,4 @@
-# The Probe Loop — TLDR
+# The Probe Loop (TLDR)
 
 > Tests verify contracts. Probes verify reality.
 

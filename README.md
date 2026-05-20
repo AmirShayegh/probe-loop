@@ -36,12 +36,12 @@ The probe loop is a five-stage verification pass that catches bugs surviving gre
 
 It catches six categories of bug:
 
-- **Silent no-ops** — the operation completes, output equals input, status says success
-- **Environment mismatches** — correct against spec, broken against runtime
-- **Swallowed errors** — failure path drops the diagnostic or returns truncated output
-- **Hardcoded parameters** — works for one case, silently wrong for the rest
-- **Cross-layer trust violations** — each layer assumes the other handled it
-- **Destructive edge cases** — safe in the common case, destroys data in the corner
+- **Silent no-ops**: the operation completes, output equals input, status says success
+- **Environment mismatches**: correct against spec, broken against runtime
+- **Swallowed errors**: failure path drops the diagnostic or returns truncated output
+- **Hardcoded parameters**: works for one case, silently wrong for the rest
+- **Cross-layer trust violations**: each layer assumes the other handled it
+- **Destructive edge cases**: safe in the common case, destroys data in the corner
 
 ## Trigger phrases
 
@@ -56,8 +56,8 @@ The skill activates on prompts like:
 
 ## When not to use
 
-- New code being developed for the first time — use TDD
-- Pure refactoring with no behavior change — use characterization tests
+- New code being developed for the first time. Use TDD instead.
+- Pure refactoring with no behavior change. Use characterization tests instead.
 - Style, linting, or formatting passes
 
 ## Background
